@@ -5,7 +5,13 @@
   },
   "products": [
     {"key": "nyxid", "label": {"en": "NyxID", "zh": "NyxID"}},
-    {"key": "aevatar", "label": {"en": "Aevatar", "zh": "Aevatar"}}
+    {"key": "aevatar", "label": {"en": "Aevatar", "zh": "Aevatar"}},
+    {"key": "ornn", "label": {"en": "Ornn", "zh": "Ornn"}},
+    {"key": "sisyphus", "label": {"en": "Sisyphus", "zh": "Sisyphus"}},
+    {"key": "automath", "label": {"en": "Automath", "zh": "Automath"}},
+    {"key": "symphony", "label": {"en": "Symphony", "zh": "Symphony"}},
+    {"key": "vibe-apps", "label": {"en": "Vibe Apps", "zh": "Vibe Apps"}},
+    {"key": "godgpt", "label": {"en": "GodGPT", "zh": "GodGPT"}}
   ],
   "closure_tiers": [
     {

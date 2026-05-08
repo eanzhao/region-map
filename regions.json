@@ -834,6 +834,718 @@
       "deps": [
         "Voice-Avatar-Stage-B"
       ]
+    },
+    "Ornn-Skill-Discovery": {
+      "label": {
+        "en": "Skill Discovery",
+        "zh": "Skill 发现"
+      },
+      "desc": {
+        "en": "Semantic search + keyword search + category browse for AI skills in the Ornn marketplace",
+        "zh": "语义搜索 + 关键词搜索 + 分类浏览，覆盖 Ornn 市场中的所有 AI Skill"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "ornn",
+      "milestone": "v0.1.3",
+      "owner": "chronoai-shining",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-26"
+      },
+      "deps": []
+    },
+    "Ornn-Skill-Sandbox": {
+      "label": {
+        "en": "Skill Sandbox",
+        "zh": "Skill 沙盒"
+      },
+      "desc": {
+        "en": "Interactive playground for testing skills — Node.js + Python runtime via chrono-sandbox",
+        "zh": "交互式 skill 测试沙盒，集成 chrono-sandbox 提供 Node.js + Python 运行环境"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "ornn",
+      "milestone": "v0.1.3",
+      "owner": "chronoai-shining",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-26"
+      },
+      "deps": []
+    },
+    "Ornn-MCP-Tools": {
+      "label": {
+        "en": "MCP Tools Integration",
+        "zh": "MCP 工具集成"
+      },
+      "desc": {
+        "en": "ornn-search-and-run, ornn-upload, ornn-build as MCP tools for Claude Code, Codex, Cursor, Antigravity",
+        "zh": "ornn-search-and-run / ornn-upload / ornn-build 作为 MCP 工具，支持 Claude Code / Codex / Cursor / Antigravity"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "ornn",
+      "milestone": "v0.1.3",
+      "owner": "chronoai-shining",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-26"
+      },
+      "deps": []
+    },
+    "Ornn-NyxID-Auth": {
+      "label": {
+        "en": "NyxID Auth Integration",
+        "zh": "NyxID 认证集成"
+      },
+      "desc": {
+        "en": "Auth and permission checks via NyxID MCP Server — core dependency for Ornn access control",
+        "zh": "通过 NyxID MCP Server 实现认证与权限检查，Ornn 访问控制的核心依赖"
+      },
+      "closure": "bridged",
+      "formal": "checked",
+      "product": "ornn",
+      "milestone": "v0.1.3",
+      "owner": "chronoai-shining",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "bridged": "2026-03-26"
+      },
+      "deps": [
+        "NyxID-OAuth-flow"
+      ]
+    },
+    "Ornn-Website": {
+      "label": {
+        "en": "Ornn Website",
+        "zh": "Ornn 网站"
+      },
+      "desc": {
+        "en": "Public-facing skill marketplace at ornn.chrono-ai.fun — skill browse, upload, and community features",
+        "zh": "面向外部的 Skill 市场网站 ornn.chrono-ai.fun，含 skill 浏览、上传和社区功能"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "ornn",
+      "milestone": "v0.1.3",
+      "owner": "chronoai-shining",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-26"
+      },
+      "deps": []
+    },
+    "Ornn-Skill-Registry-API": {
+      "label": {
+        "en": "Skill Registry API",
+        "zh": "Skill 注册表 API"
+      },
+      "desc": {
+        "en": "API for Aevatar agents to pull skill lists + metadata (name, triggers, input/output schema)",
+        "zh": "供 Aevatar agent 拉取 skill 列表 + 元数据（name / triggers / input/output schema）的 API"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "ornn",
+      "milestone": "Q2-2026",
+      "owner": "chronoai-shining",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": []
+    },
+    "Sisyphus-Research-Loop": {
+      "label": {
+        "en": "Research Loop",
+        "zh": "研究循环"
+      },
+      "desc": {
+        "en": "Automated research → verification → knowledge graph write → deeper research cycle built on Aevatar Workflow",
+        "zh": "自动化研究 → 验证 → 知识图谱写入 → 深度研究循环，运行在 Aevatar Workflow 上"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 4,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Workflow-YAML"
+      ]
+    },
+    "Sisyphus-Maker-Vote": {
+      "label": {
+        "en": "Maker Vote Consensus",
+        "zh": "Maker 投票共识"
+      },
+      "desc": {
+        "en": "Multi-agent voting mechanism to verify research conclusions before writing to the knowledge graph",
+        "zh": "多 agent 投票机制，在写入知识图谱前验证研究结论的可靠性"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Sisyphus-Research-Loop"
+      ]
+    },
+    "Sisyphus-Knowledge-Graph": {
+      "label": {
+        "en": "Knowledge Graph",
+        "zh": "知识图谱"
+      },
+      "desc": {
+        "en": "Graph storage for verified reasoning outputs — read/write, node purification pipeline, frontend visualization",
+        "zh": "存储验证推理结果的图数据库，含读写接口、节点净化流水线和前端图谱可视化"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 4,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": []
+    },
+    "Sisyphus-NyxID-MCP": {
+      "label": {
+        "en": "NyxID MCP Access",
+        "zh": "NyxID MCP 接入"
+      },
+      "desc": {
+        "en": "Sisyphus accesses graph storage and infra tools via NyxID MCP server",
+        "zh": "Sisyphus 通过 NyxID MCP Server 访问图存储和其他基础设施工具"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "NyxID-MCP-Wrap"
+      ]
+    },
+    "Sisyphus-V2-Branch": {
+      "label": {
+        "en": "Sisyphus v2 Branch",
+        "zh": "Sisyphus v2 分支"
+      },
+      "desc": {
+        "en": "Active feature/sisyphus-v2 branch — 2 WorkflowGAgents + 3 RoleGAgents on new Aevatar architecture",
+        "zh": "活跃的 feature/sisyphus-v2 分支，2 个 WorkflowGAgent + 3 个 RoleGAgent，基于新 Aevatar 架构"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Sisyphus-Integration"
+      ]
+    },
+    "Sisyphus-Discovery-Registry": {
+      "label": {
+        "en": "Discovery Registry",
+        "zh": "Discovery 注册表"
+      },
+      "desc": {
+        "en": "Receives Automath discovery reports, classifies structures, stores in knowledge graph, sends advisory back to Automath",
+        "zh": "接收 Automath 发现报告，分类结构，存入知识图谱，并向 Automath 反馈探索建议（ADR-008）"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "sisyphus",
+      "milestone": "v2",
+      "owner": "loning",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Sisyphus-Knowledge-Graph"
+      ]
+    },
+    "Automath-Lean4-Core": {
+      "label": {
+        "en": "Lean 4 Core Library",
+        "zh": "Lean 4 核心库"
+      },
+      "desc": {
+        "en": "~25K LOC mathlib-free Lean 4 base — 11 modules covering 9 math branches derived from x²=x+1",
+        "zh": "~25K 行无 mathlib 的 Lean 4 基础库，11 个模块覆盖从 x²=x+1 推导的 9 个数学分支"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "automath",
+      "milestone": "ongoing",
+      "owner": "loning",
+      "issue_count": 5,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-01-01"
+      },
+      "deps": []
+    },
+    "Automath-Theorem-Library": {
+      "label": {
+        "en": "Theorem Library (2350+)",
+        "zh": "定理库（2350+ 条）"
+      },
+      "desc": {
+        "en": "2,350+ machine-verified theorems and 27 research papers (9 submitted to JNT/ETDS/SIADS/APAL)",
+        "zh": "2,350+ 机器验证定理 + 27 篇研究论文（9 篇已投稿 JNT/ETDS/SIADS/APAL）"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "automath",
+      "milestone": "ongoing",
+      "owner": "loning",
+      "issue_count": 4,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-01-01"
+      },
+      "deps": [
+        "Automath-Lean4-Core"
+      ]
+    },
+    "Automath-Oracle-Pipeline": {
+      "label": {
+        "en": "Oracle Auto-Publish Pipeline",
+        "zh": "Oracle 自动发表流水线"
+      },
+      "desc": {
+        "en": "End-to-end automated paper generation → AI review → submission via ChatGPT Oracle + Tampermonkey",
+        "zh": "端到端全自动论文生成 → AI 审查 → 投稿，通过 ChatGPT Oracle + Tampermonkey 驱动"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "automath",
+      "milestone": "Q2-2026",
+      "owner": "loning",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-04-01"
+      },
+      "deps": [
+        "Automath-Theorem-Library"
+      ]
+    },
+    "Automath-AI-Derive-Loop": {
+      "label": {
+        "en": "AI Derive Loop",
+        "zh": "AI 推导循环"
+      },
+      "desc": {
+        "en": "AI-driven Derive → Discover → Name methodology — explore math structures from a single equation",
+        "zh": "AI 驱动的 Derive → Discover → Name 方法论，从单一方程探索数学结构"
+      },
+      "closure": "mature",
+      "formal": "checked",
+      "product": "automath",
+      "milestone": "ongoing",
+      "owner": "loning",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-01-01"
+      },
+      "deps": [
+        "Automath-Lean4-Core"
+      ]
+    },
+    "Automath-Sisyphus-Bridge": {
+      "label": {
+        "en": "Sisyphus Cloud Bridge",
+        "zh": "Sisyphus 云端桥接"
+      },
+      "desc": {
+        "en": "Future integration: Sisyphus drives Automath reasoning tasks from the cloud via Discovery Registry interface",
+        "zh": "未来集成：Sisyphus 通过 Discovery Registry 接口在云端调度 Automath 推理任务（ADR-008）"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "automath",
+      "milestone": "Q3-2026",
+      "owner": "loning",
+      "issue_count": 1,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Sisyphus-V2-Branch"
+      ]
+    },
+    "Symphony-Core-Service": {
+      "label": {
+        "en": "Core Service (Rust)",
+        "zh": "核心服务（Rust）"
+      },
+      "desc": {
+        "en": "Rust-based core service for Symphony — agent-as-person model, task assignment and status tracking",
+        "zh": "Symphony 的 Rust 核心服务，实现 agent-as-person 模型的任务分配和状态追踪"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "symphony",
+      "milestone": "v0",
+      "owner": "kaiweijw",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": []
+    },
+    "Symphony-GitHub-Issues-Integration": {
+      "label": {
+        "en": "GitHub Issues Integration",
+        "zh": "GitHub Issues 集成"
+      },
+      "desc": {
+        "en": "Agents can read and write GitHub Issues — first external integration for Symphony task management",
+        "zh": "Agent 可读写 GitHub Issues，Symphony 任务管理的首个外部集成，已完成"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "symphony",
+      "milestone": "v0",
+      "owner": "kaiweijw",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-15"
+      },
+      "deps": [
+        "Symphony-Core-Service"
+      ]
+    },
+    "Symphony-CLI": {
+      "label": {
+        "en": "CLI Tool",
+        "zh": "命令行工具"
+      },
+      "desc": {
+        "en": "Command-line interface for Symphony — interact with agent tasks, view status, trigger actions",
+        "zh": "Symphony 命令行工具，用于与 agent 任务交互、查看状态和触发操作"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "symphony",
+      "milestone": "v0",
+      "owner": "kaiweijw",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": [
+        "Symphony-Core-Service"
+      ]
+    },
+    "Symphony-Agent-PM-Concept": {
+      "label": {
+        "en": "Agent PM Concept",
+        "zh": "Agent 项目管理概念"
+      },
+      "desc": {
+        "en": "Design thesis: each agent = a person, Symphony = project management for coordinating multi-agent collaboration",
+        "zh": "设计假设：每个 agent = 一个人，Symphony = 管理多 agent 协作的项目管理系统"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "symphony",
+      "milestone": "exploring",
+      "owner": "kaiweijw",
+      "issue_count": 1,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": []
+    },
+    "Symphony-Aevatar-Integration": {
+      "label": {
+        "en": "Aevatar Orchestration Layer",
+        "zh": "Aevatar 编排层集成"
+      },
+      "desc": {
+        "en": "Future: Symphony provides task scheduling while Aevatar provides agent runtime — unlocks when A0 stable",
+        "zh": "未来：Symphony 提供任务调度，Aevatar 提供 agent 运行时，A0 稳定后解锁"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "symphony",
+      "milestone": "post-A0",
+      "owner": "kaiweijw",
+      "issue_count": 1,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Workflow-YAML"
+      ]
+    },
+    "Vibe-Soulgarden-Expo": {
+      "label": {
+        "en": "SoulGarden Expo App",
+        "zh": "SoulGarden Expo 应用"
+      },
+      "desc": {
+        "en": "Expo / React Native mobile app — validates Aevatar developer experience for consumer-facing use case",
+        "zh": "Expo / React Native 移动端应用，验证 Aevatar 在消费者场景下的开发者体验"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "vibe-apps",
+      "milestone": "DX-validation",
+      "owner": "ctkm-aelf",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": []
+    },
+    "Vibe-Riteset-Expo": {
+      "label": {
+        "en": "RiteSet Expo App",
+        "zh": "RiteSet Expo 应用"
+      },
+      "desc": {
+        "en": "Second Expo / React Native app in Vibe Apps suite — explores habit tracking use case on Aevatar",
+        "zh": "Vibe Apps 套件中第二个 Expo / React Native 应用，探索 Aevatar 上的习惯追踪场景"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "vibe-apps",
+      "milestone": "DX-validation",
+      "owner": "ctkm-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": []
+    },
+    "Vibe-Soulgarden-Web": {
+      "label": {
+        "en": "SoulGarden Web",
+        "zh": "SoulGarden Web 端"
+      },
+      "desc": {
+        "en": "Web companion to SoulGarden Expo app — backend + frontend for the Aevatar DX validation stack",
+        "zh": "SoulGarden Expo 的 Web 配套，后端 + 前端组成 Aevatar DX 验证完整技术栈"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "vibe-apps",
+      "milestone": "DX-validation",
+      "owner": "ctkm-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": []
+    },
+    "Vibe-Aura-Polaroid": {
+      "label": {
+        "en": "Aura Polaroid App",
+        "zh": "Aura Polaroid 应用"
+      },
+      "desc": {
+        "en": "Image processing vibe app exploring AI-driven visual effects and creative UX on Aevatar",
+        "zh": "图像处理类 vibe app，探索 Aevatar 上的 AI 驱动视觉特效和创意交互"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "vibe-apps",
+      "milestone": "DX-validation",
+      "owner": "ctkm-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-01"
+      },
+      "deps": []
+    },
+    "Vibe-Aevatar-DX-Validation": {
+      "label": {
+        "en": "Aevatar DX Validation Meta",
+        "zh": "Aevatar DX 验证元任务"
+      },
+      "desc": {
+        "en": "Meta-region: document DX friction points and best practices from vibe app development for Aevatar team",
+        "zh": "元任务：将 vibe app 开发过程中发现的 Aevatar DX 摩擦点和最佳实践整理反馈给 Aevatar 团队"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "vibe-apps",
+      "milestone": "DX-validation",
+      "owner": "ctkm-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Agent-Framework"
+      ]
+    },
+    "GodGPT-Lumen-Personality": {
+      "label": {
+        "en": "Lumen AI Personality",
+        "zh": "Lumen AI 人格"
+      },
+      "desc": {
+        "en": "GodGPT's AI companion persona (Lumen) — personality engine, conversational context, character consistency",
+        "zh": "GodGPT 的 AI 伴侣人格（Lumen）——个性引擎、对话上下文和角色一致性"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "godgpt",
+      "milestone": "maintenance",
+      "owner": "jason-aelf",
+      "issue_count": 3,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-02-01"
+      },
+      "deps": []
+    },
+    "GodGPT-Calendar-Integration": {
+      "label": {
+        "en": "Google Calendar Integration",
+        "zh": "Google Calendar 集成"
+      },
+      "desc": {
+        "en": "Google Calendar integration inside GodGPT — read events, create reminders, schedule via AI companion",
+        "zh": "GodGPT 内的 Google Calendar 集成，支持读取日程、创建提醒、AI 驱动日程安排"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "godgpt",
+      "milestone": "maintenance",
+      "owner": "jason-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-02-01"
+      },
+      "deps": []
+    },
+    "GodGPT-Subscription-Billing": {
+      "label": {
+        "en": "Subscription Billing",
+        "zh": "订阅计费"
+      },
+      "desc": {
+        "en": "Free trial + subscription billing infra for GodGPT — payment processing and plan management",
+        "zh": "GodGPT 的免费试用 + 订阅计费基础设施，含支付处理和套餐管理"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "godgpt",
+      "milestone": "maintenance",
+      "owner": "jason-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-02-01"
+      },
+      "deps": []
+    },
+    "GodGPT-Affiliate-Tracking": {
+      "label": {
+        "en": "Affiliate Tracking (Tolt)",
+        "zh": "联盟推广追踪（Tolt）"
+      },
+      "desc": {
+        "en": "Referral and affiliate tracking system via Tolt integration on GodGPT landing page",
+        "zh": "通过 Tolt 集成实现的 GodGPT 推广联盟追踪系统，在落地页上运行"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "godgpt",
+      "milestone": "maintenance",
+      "owner": "jason-aelf",
+      "issue_count": 1,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-03-05"
+      },
+      "deps": []
+    },
+    "GodGPT-Aevatar-Runtime": {
+      "label": {
+        "en": "Aevatar Agent Runtime",
+        "zh": "Aevatar Agent 运行时"
+      },
+      "desc": {
+        "en": "GodGPT runs on Aevatar agent framework — C#/.NET app + godgpt-app integration layer",
+        "zh": "GodGPT 运行在 Aevatar agent 框架上，C#/.NET 主应用 + godgpt-app 集成层"
+      },
+      "closure": "mature",
+      "formal": "none",
+      "product": "godgpt",
+      "milestone": "maintenance",
+      "owner": "jason-aelf",
+      "issue_count": 2,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "mature": "2026-02-01"
+      },
+      "deps": [
+        "Aevatar-Agent-Framework"
+      ]
     }
   }
 }
