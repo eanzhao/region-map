@@ -4,14 +4,21 @@
 
 源自 newmath BEDC viz, 复用 closure-tier 心智模型 (单调闭合, 不回退, mature 后封档)。
 
+## 在线访问 / Live
+
+发布在 GitHub Pages: <https://chronoaiproject.github.io/region-map/visualization.html>
+
+每次 push 到 `main` 自动 build + 发布 (见 `.github/workflows/publish.yml`)。
+
 ## 快速开始 / Quick Start
 
 ```bash
-cd region-map
 quarto preview
 ```
 
 打开浏览器到 `http://localhost:<port>`, 默认中文界面, 顶部 EN/ZH 切换。
+
+设计原理 / 数据模型详见 [`ARCHITECTURE.md`](ARCHITECTURE.md)。
 
 ## 三层结构 / Three-Layer Structure
 
@@ -104,23 +111,36 @@ seed → obligation → scoped → public → bridged → mature → (archived a
 ## 校验 / Validators
 
 ```bash
-cd region-map/tools
+cd tools
 python3 validate_config.py
 python3 validate_regions.py
 python3 -m unittest test_validate.py
 ```
 
+CI 在 PR 上自动跑这些 (见 `.github/workflows/validate.yml`), 失败阻 merge。
+
+## 漂移检测 / Drift detection
+
+可选给 region 加 `gh_query` 字段, audit 会拉 GitHub 实际 issue 数对比 `issue_count`:
+
+```bash
+python3 tools/audit_regions.py            # report only
+python3 tools/audit_regions.py --strict   # exit 1 on drift
+python3 tools/audit_regions.py --markdown # markdown report
+```
+
+CI workflow `.github/workflows/audit.yml`:
+- PR 改动 `regions.json` → `--strict` 严格检测, 漂移阻 merge
+- 每周一 SGT 09:00 (cron) → markdown report 评论到 "Weekly region drift audit" issue
+- `workflow_dispatch` → 手动触发同上
+
+`closure / formal / promoted_at / focus` 等 judgment 字段不自动推断, 保持人工维护。
+
 ## 构建 / Build
 
 ```bash
-cd region-map
 quarto render        # build 到 _site/
 quarto preview       # 本地服务器, 改文件自动重载
 ```
 
 注意: `quarto preview` 只 watch `.qmd` 源码; 改 `config.json` 或 `regions.json` 需要重启 preview 或跑 `quarto render` 才能看到效果。
-
-## 不发布 / Not Published
-
-本子项目暂不发布到 GitHub Pages, 只做本地预览 + 内部决策辅助。
-后续如要发布, 加 `.github/workflows/region-map.yml` (GH Pages action)。
