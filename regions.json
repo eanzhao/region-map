@@ -36,15 +36,15 @@
         "zh": "Studio Team-First 控制台"
       },
       "desc": {
-        "en": "ADR 0017 + 17 design docs: surface Team as first-class backend aggregate under Scope. Member workbench, team directory, workspace wording. Milestones #2 / #3 / #8 / #10 / #11 / #12 actively shipping.",
-        "zh": "ADR 0017 + 17 篇设计文档: Team 作为 Scope 下一等聚合, Member workbench, Team Directory, Workspace 语义。里程碑 #2 / #3 / #8 / #10 / #11 / #12 持续在发"
+        "en": "ADR 0017 + 17 design docs: Team as a first-class aggregate under Scope. StudioTeamGAgent / StudioMemberGAgent + member-team binding via team_id. Milestones #2 / #3 / #8 / #10 / #11 / #12 ongoing. #670 Studio Team-First Console MVP — define backend product entity / member ownership / member binding main chain (jason).",
+        "zh": "ADR 0017 + 17 篇设计文档: Team 作为 Scope 下一等聚合。StudioTeamGAgent / StudioMemberGAgent + 成员侧 team_id 归属。里程碑 #2 / #3 / #8 / #10 / #11 / #12 持续在发。#670 Studio Team-First Console MVP — 后端产品实体 / 成员归属 / 成员绑定主链路收敛 (jason)。"
       },
       "closure": "obligation",
       "formal": "checked",
       "product": "aevatar",
       "milestone": "A0",
-      "owner": "JasonWangCN",
-      "issue_count": 8,
+      "owner": "jason-aelf",
+      "issue_count": 9,
       "focus": true,
       "archived": false,
       "promoted_at": {
@@ -55,7 +55,7 @@
         "Aevatar-Testnet-Stability",
         "Aevatar-Virtual-Actors"
       ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar label:\"team\" OR (Studio in:title OR Team in:title)"
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar author:jason-aelf"
     },
     "Aevatar-EventSourcing-Hardening": {
       "label": {
