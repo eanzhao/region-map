@@ -981,6 +981,8 @@
       "promoted_at": {},
       "deps": [
         "Aevatar-Chain-Test-Coverage",
+        "Aevatar-Console-Web-Member-Flows",
+        "Aevatar-Event-Intake-Lab",
         "Aevatar-EventSourcing-Hardening",
         "Aevatar-Router-Agent",
         "Aevatar-Studio-Team-First"
@@ -1010,6 +1012,83 @@
         "Aevatar-Responses-Ingress"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar author:YueZh127 label:test"
+    },
+    "Aevatar-Event-Intake-API": {
+      "label": {
+        "en": "Event Intake API",
+        "zh": "Event Intake 后端接口"
+      },
+      "desc": {
+        "en": "Backend contract that the frontend Event Intake Lab calls: APIs for creating / configuring an Agent Studio team, binding an intake role to an external event source, receiving Lark bot / webhook events, dispatching them into the agent team, and exposing processing status / results back to the UI. Hides Router agent, Studio member binding, NyxID auth/proxy, and skill/tool execution behind a frontend-facing surface.",
+        "zh": "前端 Event Intake Lab 调用的后端合约: 创建 / 配置 Agent Studio team, 把 intake role 绑定到外部事件源, 接收 Lark bot / webhook 事件, 投递给 agent team 处理, 并向 UI 暴露处理状态 / 结果。把 Router agent、Studio member 绑定、NyxID auth/proxy、skill/tool 执行包装在前端可用的接口后面。"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "eanzhao",
+      "issue_count": 1,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Agent-Framework",
+        "Aevatar-Router-Agent",
+        "NyxID-Hosted-Instance",
+        "NyxID-OAuth-flow",
+        "NyxID-Reverse-Proxy"
+      ],
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar \"Event Intake API\" in:title"
+    },
+    "Aevatar-Event-Intake-Lab": {
+      "label": {
+        "en": "Event Intake Lab (Frontend Demo)",
+        "zh": "Event Intake Lab (前端 Demo)"
+      },
+      "desc": {
+        "en": "Frontend demo in Agent Studio: create a team, configure an intake role for external events (Lark bot messages), and show the agent team's processing result. Frontend face of the Inbound → Router → Team chain. Direct dependency is the backend Event Intake API contract.",
+        "zh": "Agent Studio 前端 demo: 创建 team, 配置 intake role 接收 Lark bot 等外部事件, 展示 agent team 的处理结果。Inbound → Router → Team 主链的前端门面。直接依赖后端 Event Intake API 合约。"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "abigail",
+      "issue_count": 1,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Event-Intake-API"
+      ],
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar \"Event Intake\" in:title"
+    },
+    "Aevatar-Console-Web-Member-Flows": {
+      "label": {
+        "en": "Console Web Member Flows",
+        "zh": "Console Web 成员态流程"
+      },
+      "desc": {
+        "en": "Frontend counterpart to Studio Team-First: Studio member identity cleanup, member-scoped Bind / Invoke / Observe, and chat-like current run console. Tracks open #654 and #655; #652 closed 2026-05-18 as part of member identity cleanup.",
+        "zh": "Studio Team-First 的前端对应: Studio 成员身份清理、Bind / Invoke / Observe 严格成员域化、chat-like 当前运行控制台。跟踪未关闭的 #654 / #655; 相关 #652 已于 2026-05-18 closed。"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "potter-sun",
+      "issue_count": 2,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {
+        "seed": "2026-05-14",
+        "obligation": "2026-05-14"
+      },
+      "deps": [
+        "Aevatar-Agent-Framework",
+        "Aevatar-Studio-Team-First"
+      ],
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar console-web Invoke in:title"
     }
   }
 }
