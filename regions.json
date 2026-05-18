@@ -993,15 +993,15 @@
         "zh": "主链测试覆盖"
       },
       "desc": {
-        "en": "Cross-layer regression coverage for the Inbound → Router → Team chain. #666 Studio member identity / binding / current run cross-layer consistency. #667 LlmSession / ResponsesAgentToolState durable correctness regression. #668 Responses / Messages new main-chain test gaps. Owner: YueZh127 (QA).",
-        "zh": "外部入站 → Router → Team 主链的跨层回归覆盖。#666 Studio member 身份 / binding / current run 跨层一致性。#667 LlmSession / ResponsesAgentToolState durable correctness 回归。#668 Responses / Messages 新主链缺口测试。Owner: YueZh127 (测试)。"
+        "en": "Cross-layer regression coverage for the Inbound → Router → Team chain. #666 Studio member identity / binding / current run cross-layer consistency. #667 LlmSession / ResponsesAgentToolState durable correctness regression. #668 Responses / Messages new main-chain test gaps. #669 Ornn / NyxID / tool credential boundary regression. Owner: YueZh127 (QA).",
+        "zh": "外部入站 → Router → Team 主链的跨层回归覆盖。#666 Studio member 身份 / binding / current run 跨层一致性。#667 LlmSession / ResponsesAgentToolState durable correctness 回归。#668 Responses / Messages 新主链缺口测试。#669 Ornn / NyxID / tool credential boundary 专项回归。Owner: YueZh127 (测试)。"
       },
       "closure": "seed",
       "formal": "checked",
       "product": "aevatar",
       "milestone": "A0",
       "owner": "YueZh127",
-      "issue_count": 3,
+      "issue_count": 4,
       "focus": true,
       "archived": false,
       "promoted_at": {},
