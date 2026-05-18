@@ -90,19 +90,19 @@
     },
     "Aevatar-EventSourcing-Hardening": {
       "label": {
-        "en": "EventSourcing / CQRS Hardening",
-        "zh": "EventSourcing / CQRS 加固"
+        "en": "EventSourcing / CQRS Hardening (Stability Lane)",
+        "zh": "EventSourcing / CQRS 加固 (稳定性优化项)"
       },
       "desc": {
-        "en": "Architecture-track work: unify async write/observation/read-model freshness (#594), standardize ES projection mappings (#533), reduce projection boilerplate (#591), resolve OCC pending-state leaks (#381). Symphony-team backlog.",
-        "zh": "架构线工作: 统一 async write/observation/read-model 新鲜度 (#594), 标准化 ES projection mapping (#533), 减少 projection 模板 (#591), 修复 OCC pending 残留 (#381)。Symphony 团队 backlog"
+        "en": "louis backlog on stability/architecture refinement. Async write + read-model freshness contract: #592 (backend async op contract for CQRS), #593 (frontend async op handling for read-model latency), #594 (unify async write/observation/freshness), #616 (replace ScopeBinding readmodel polling with explicit binding-readiness observation). Projection plumbing: #591 (reduce current-state projection boilerplate), #533 (standardize ES projection index mappings), #543 (activate NyxID OAuth binding projection scope). StreamingProxy refactor: #376 (actorize + remove participant double writes), #377 (clarify projection lease scope). Legacy: #381 (EventSourcing OCC stale _pending).",
+        "zh": "louis 在稳定性 / 架构精细化的 backlog. 异步写入 + 读模型新鲜度契约: #592 (CQRS 后端异步操作契约), #593 (前端异步操作处理读模型延迟), #594 (统一异步写 / 观察 / 新鲜度), #616 (用绑定就绪观察替换 ScopeBinding readmodel 轮询)。Projection 管线: #591 (削减 current-state projection 模板), #533 (标准化 ES projection 索引映射), #543 (激活 NyxID OAuth 绑定 projection scope)。StreamingProxy 重构: #376 (actor 化 + 去掉参与方双写), #377 (理清 projection lease scope)。历史项: #381 (EventSourcing OCC 残留 _pending)。"
       },
       "closure": "obligation",
       "formal": "none",
       "product": "aevatar",
       "milestone": "A0",
       "owner": "loning",
-      "issue_count": 5,
+      "issue_count": 10,
       "focus": true,
       "archived": false,
       "promoted_at": {
@@ -112,7 +112,7 @@
         "Aevatar-Agent-Framework",
         "Aevatar-Virtual-Actors"
       ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar label:architecture"
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar author:louis4li"
     },
     "Aevatar-M14-Milestone": {
       "label": {
@@ -1265,8 +1265,8 @@
     },
     "Aevatar-Inbound-Team-Demo": {
       "label": {
-        "en": "Inbound → Router → Team Demo (Boss Endgame)",
-        "zh": "外部入站 → Router → Team 端到端 (老板要的)"
+        "en": "Inbound → Router → Team Demo",
+        "zh": "外部入站 → Router → Team 端到端"
       },
       "desc": {
         "en": "End-to-end demo convergence: NyxID Direct (/v1/responses) and Lark bot inbound channel both forward through the Router agent to a Studio/Team member, which handles the event via RoleGAgent + NyxID + Ornn. This is the visible 2026 Q2 deliverable that proves the chain works.",
