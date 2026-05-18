@@ -122,17 +122,20 @@
         "en": "Architecture-track work: unify async write/observation/read-model freshness (#594), standardize ES projection mappings (#533), reduce projection boilerplate (#591), resolve OCC pending-state leaks (#381). Symphony-team backlog.",
         "zh": "架构线工作: 统一 async write/observation/read-model 新鲜度 (#594), 标准化 ES projection mapping (#533), 减少 projection 模板 (#591), 修复 OCC pending 残留 (#381)。Symphony 团队 backlog"
       },
-      "closure": "seed",
+      "closure": "obligation",
       "formal": "none",
       "product": "aevatar",
       "milestone": "A0",
-      "owner": "chronoai-shining",
+      "owner": "loning",
       "issue_count": 5,
       "focus": false,
       "archived": false,
-      "promoted_at": {},
+      "promoted_at": {
+        "obligation": "2026-04-10"
+      },
       "deps": [
-        "Aevatar-Agent-Framework"
+        "Aevatar-Agent-Framework",
+        "Aevatar-Virtual-Actors"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar label:architecture"
     },
@@ -1354,6 +1357,79 @@
       },
       "deps": [],
       "gh_query": "is:issue is:open repo:aevatarAI/godgpt affiliate in:title"
+    },
+    "Aevatar-Router-Agent": {
+      "label": {
+        "en": "Router Agent (Thin Ingress)",
+        "zh": "Router Agent (薄入口)"
+      },
+      "desc": {
+        "en": "Unify Lark conversation + NyxID Responses ingress under a single router that forwards events to downstream agents. Collapses the two parallel ingress GAgents (ConversationGAgent + LlmSessionGAgent) into thin shells. Paired with GAgent inventory cleanup.",
+        "zh": "把 Lark conversation 与 NyxID Responses 两条入站路径收口到统一 router, 事件转发给下游 agent。让两个并行接入 GAgent (ConversationGAgent + LlmSessionGAgent) 退化为薄壳。与 GAgent 清单瘦身配套。"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "eanzhao",
+      "issue_count": 0,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-M14-Milestone",
+        "Aevatar-Channel-Multi-Adapter"
+      ],
+      "gh_query": "is:issue repo:aevatarAI/aevatar router in:title"
+    },
+    "Aevatar-GAgent-Inventory-Cleanup": {
+      "label": {
+        "en": "GAgent Inventory Cleanup",
+        "zh": "GAgent 清单瘦身"
+      },
+      "desc": {
+        "en": "Deprecate Telegram bridge GAgents (#644, route via NyxID relay instead) and audit/remove StreamingProxy if obsolete (#645). Pairs with Router Agent — keep only the in-use ingress/runtime set. (#643 dead Multi-Agent removal is tracked under Aevatar-Ornn-Skill-Platform.)",
+        "zh": "废弃 Telegram bridge GAgents (#644, 改走 NyxID relay), 审计 StreamingProxy 是否已废弃 (#645)。与 Router Agent 配套, 只留可用的 ingress/runtime 集合。(#643 死代码 Multi-Agent 清理跟在 Aevatar-Ornn-Skill-Platform 下)"
+      },
+      "closure": "obligation",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "eanzhao",
+      "issue_count": 2,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {
+        "obligation": "2026-05-15"
+      },
+      "deps": [],
+      "gh_query": "is:issue repo:aevatarAI/aevatar (deprecate OR StreamingProxy OR Telegram) in:title"
+    },
+    "Aevatar-Inspector": {
+      "label": {
+        "en": "Actor Inspector + OTel",
+        "zh": "Actor Inspector + OTel 可观测"
+      },
+      "desc": {
+        "en": "Local Actor Inspector demo and OpenTelemetry observability for runtime introspection. Shipped 2026-05-12: 6189888d (Inspector + OTel), 7b8b78da (live pulse polish).",
+        "zh": "本地 Actor Inspector 演示 + OpenTelemetry, 观察 actor 运行时。2026-05-12 ship: 6189888d (Inspector + OTel), 7b8b78da (live pulse 优化)。"
+      },
+      "closure": "scoped",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A1",
+      "owner": "eanzhao",
+      "issue_count": 1,
+      "focus": false,
+      "archived": false,
+      "promoted_at": {
+        "obligation": "2026-05-10",
+        "scoped": "2026-05-15"
+      },
+      "deps": [
+        "Aevatar-Virtual-Actors"
+      ],
+      "gh_query": "is:issue repo:aevatarAI/aevatar Inspector in:title"
     }
   }
 }
