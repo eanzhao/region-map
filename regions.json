@@ -34,33 +34,6 @@
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar A0 in:title"
     },
-    "Aevatar-A1-Milestone": {
-      "label": {
-        "en": "Aevatar A1 — Phase 2 Start",
-        "zh": "Aevatar A1 — Phase 2 启动"
-      },
-      "desc": {
-        "en": "Aggregator: custom template via NL, launches when NyxID hits M2",
-        "zh": "聚合节点: 自然语言创建自定义模板, NyxID M2 达成时同步启动"
-      },
-      "closure": "seed",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A1",
-      "owner": "eanzhao",
-      "issue_count": 1,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-A0-Milestone",
-        "Aevatar-CSharp-Scripting",
-        "Aevatar-M14-Milestone",
-        "Aevatar-Ornn-Skill-Platform",
-        "Aevatar-SessionStream-Abstraction"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar A1 in:title"
-    },
     "Aevatar-Channel-Multi-Adapter": {
       "label": {
         "en": "Channel Multi-Adapter (Lark / Telegram / …)",
@@ -329,8 +302,7 @@
       "archived": false,
       "promoted_at": {},
       "deps": [
-        "Aevatar-Agent-Framework",
-        "Aevatar-Voice-Stage-D"
+        "Aevatar-Agent-Framework"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar SessionStream in:title OR \"long connection\" in:title"
     },
@@ -382,26 +354,6 @@
         "Aevatar-Virtual-Actors"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar script in:title"
-    },
-    "Aevatar-Deck": {
-      "label": {
-        "en": "Aevatar Pitch Deck",
-        "zh": "Aevatar 产品 Deck"
-      },
-      "desc": {
-        "en": "Investor / partner-facing product deck for Aevatar platform. Repo aevatarAI/aevatar-deck.",
-        "zh": "面向投资人和合作方的 Aevatar 产品介绍 Deck。仓库 aevatarAI/aevatar-deck"
-      },
-      "closure": "public",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "loning",
-      "issue_count": 0,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": []
     },
     "Aevatar-NyxID-Integration": {
       "label": {
@@ -497,31 +449,6 @@
       "deps": [],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar actor in:title"
     },
-    "Aevatar-Voice-Stage-D": {
-      "label": {
-        "en": "Voice Stage D — Aevatar Integration",
-        "zh": "Voice Stage D — Aevatar 集成"
-      },
-      "desc": {
-        "en": "Port voice protocol spec into Aevatar as VoiceGAgent + VoiceSessionService (ADR-018 Stage D)",
-        "zh": "将 voice 协议 spec 移植进 Aevatar, 成为 VoiceGAgent + VoiceSessionService (ADR-018 Stage D)"
-      },
-      "closure": "scoped",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "Stage-D",
-      "owner": "eanzhao",
-      "issue_count": 0,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Voice-Avatar-Stage-A",
-        "Voice-Avatar-Stage-B",
-        "Voice-Avatar-Stage-C"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar VoicePresence in:title"
-    },
     "Aevatar-Workflow-YAML": {
       "label": {
         "en": "Workflow Engine (YAML)",
@@ -546,79 +473,6 @@
         "Aevatar-Virtual-Actors"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar workflow in:title"
-    },
-    "Voice-Avatar-Stage-A": {
-      "label": {
-        "en": "Voice Stage A — Minimal Loop (archived)",
-        "zh": "Voice Stage A — 最小 voice loop (已归档)"
-      },
-      "desc": {
-        "en": "Standalone ASP.NET 10: PCM16 → OpenAI Realtime, validated AEC + audio loop. ChronoAIProject/voice-presence #1 closed.",
-        "zh": "独立 ASP.NET 10: PCM16 → OpenAI Realtime, 验证 AEC + 音频回环。ChronoAIProject/voice-presence #1 已 closed"
-      },
-      "closure": "mature",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "Stage-A",
-      "owner": "kaihuei0114",
-      "issue_count": 0,
-      "focus": false,
-      "archived": true,
-      "promoted_at": {
-        "bridged": "2026-04-11",
-        "mature": "2026-04-12"
-      },
-      "deps": [],
-      "gh_query": "is:issue is:open repo:ChronoAIProject/voice-presence Stage A in:title"
-    },
-    "Voice-Avatar-Stage-B": {
-      "label": {
-        "en": "Voice Stage B — Tool/Events (archived)",
-        "zh": "Voice Stage B — 工具 / 事件 (已归档)"
-      },
-      "desc": {
-        "en": "Tool execution + DevMock + turn epoch protocol + per-session mailbox + reconnect. voice-presence #2 closed.",
-        "zh": "工具执行 + DevMock + turn epoch 协议 + per-session mailbox + 重连。voice-presence #2 已 closed"
-      },
-      "closure": "mature",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "Stage-B",
-      "owner": "kaihuei0114",
-      "issue_count": 0,
-      "focus": false,
-      "archived": true,
-      "promoted_at": {
-        "bridged": "2026-04-11",
-        "mature": "2026-04-12"
-      },
-      "deps": [
-        "Voice-Avatar-Stage-A"
-      ],
-      "gh_query": "is:issue is:open repo:ChronoAIProject/voice-presence Stage B in:title"
-    },
-    "Voice-Avatar-Stage-C": {
-      "label": {
-        "en": "Voice Stage C — WebRTC + ESP32",
-        "zh": "Voice Stage C — WebRTC + ESP32 硬件"
-      },
-      "desc": {
-        "en": "WebRTC desktop adapter validated. ESP32 via LiveKit WHIP pending (#4 / #6 / #7 open).",
-        "zh": "WebRTC 桌面端适配已验证, ESP32 通过 LiveKit WHIP 接入待完成 (#4 / #6 / #7 open)"
-      },
-      "closure": "scoped",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "Stage-C",
-      "owner": "kaihuei0114",
-      "issue_count": 2,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Voice-Avatar-Stage-B"
-      ],
-      "gh_query": "is:issue is:open repo:ChronoAIProject/voice-presence Stage C in:title"
     },
     "NyxID-OAuth-flow": {
       "label": {
@@ -1404,32 +1258,6 @@
       },
       "deps": [],
       "gh_query": "is:issue repo:aevatarAI/aevatar (deprecate OR StreamingProxy OR Telegram) in:title"
-    },
-    "Aevatar-Inspector": {
-      "label": {
-        "en": "Actor Inspector + OTel",
-        "zh": "Actor Inspector + OTel 可观测"
-      },
-      "desc": {
-        "en": "Local Actor Inspector demo and OpenTelemetry observability for runtime introspection. Shipped 2026-05-12: 6189888d (Inspector + OTel), 7b8b78da (live pulse polish).",
-        "zh": "本地 Actor Inspector 演示 + OpenTelemetry, 观察 actor 运行时。2026-05-12 ship: 6189888d (Inspector + OTel), 7b8b78da (live pulse 优化)。"
-      },
-      "closure": "scoped",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A1",
-      "owner": "eanzhao",
-      "issue_count": 1,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {
-        "obligation": "2026-05-10",
-        "scoped": "2026-05-15"
-      },
-      "deps": [
-        "Aevatar-Virtual-Actors"
-      ],
-      "gh_query": "is:issue repo:aevatarAI/aevatar Inspector in:title"
     }
   }
 }
