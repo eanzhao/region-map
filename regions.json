@@ -69,7 +69,7 @@
         "en": "ADR 0017 + 17 design docs: surface Team as first-class backend aggregate under Scope. Member workbench, team directory, workspace wording. Milestones #2 / #3 / #8 / #10 / #11 / #12 actively shipping.",
         "zh": "ADR 0017 + 17 篇设计文档: Team 作为 Scope 下一等聚合, Member workbench, Team Directory, Workspace 语义。里程碑 #2 / #3 / #8 / #10 / #11 / #12 持续在发"
       },
-      "closure": "bridged",
+      "closure": "obligation",
       "formal": "checked",
       "product": "aevatar",
       "milestone": "A0",
@@ -78,8 +78,7 @@
       "focus": true,
       "archived": false,
       "promoted_at": {
-        "scoped": "2026-04-29",
-        "bridged": "2026-05-11"
+        "scoped": "2026-04-29"
       },
       "deps": [
         "Aevatar-Agent-Framework",
@@ -90,19 +89,19 @@
     },
     "Aevatar-EventSourcing-Hardening": {
       "label": {
-        "en": "EventSourcing / CQRS Hardening (Stability Lane)",
-        "zh": "EventSourcing / CQRS 加固 (稳定性优化项)"
+        "en": "Stability Lane",
+        "zh": "稳定性优化项"
       },
       "desc": {
-        "en": "louis backlog on stability/architecture refinement. Async write + read-model freshness contract: #592 (backend async op contract for CQRS), #593 (frontend async op handling for read-model latency), #594 (unify async write/observation/freshness), #616 (replace ScopeBinding readmodel polling with explicit binding-readiness observation). Projection plumbing: #591 (reduce current-state projection boilerplate), #533 (standardize ES projection index mappings), #543 (activate NyxID OAuth binding projection scope). StreamingProxy refactor: #376 (actorize + remove participant double writes), #377 (clarify projection lease scope). Legacy: #381 (EventSourcing OCC stale _pending).",
-        "zh": "louis 在稳定性 / 架构精细化的 backlog. 异步写入 + 读模型新鲜度契约: #592 (CQRS 后端异步操作契约), #593 (前端异步操作处理读模型延迟), #594 (统一异步写 / 观察 / 新鲜度), #616 (用绑定就绪观察替换 ScopeBinding readmodel 轮询)。Projection 管线: #591 (削减 current-state projection 模板), #533 (标准化 ES projection 索引映射), #543 (激活 NyxID OAuth 绑定 projection scope)。StreamingProxy 重构: #376 (actor 化 + 去掉参与方双写), #377 (理清 projection lease scope)。历史项: #381 (EventSourcing OCC 残留 _pending)。"
+        "en": "louis backlog this week (2026-W21): #544 (Studio team roster fanout reliability), #545 (move member patch intent into the member actor), #547 (honest Studio team command ACK semantics), #616 (replace ScopeBinding readmodel polling with binding-readiness observation), #543 (activate NyxID OAuth binding projection scope at bootstrap). Spans both Studio team backend hardening and projection/async correctness.",
+        "zh": "louis 本周 (2026-W21) backlog: #544 (Studio team roster fanout 可靠化), #545 (member patch intent 评估下沉到 member actor), #547 (Studio team command ACK 语义诚实), #616 (用绑定就绪观察替换 ScopeBinding readmodel 轮询), #543 (启动时激活 NyxID OAuth 绑定 projection scope)。横跨 Studio team 后端硬化与 projection / 异步正确性。"
       },
       "closure": "obligation",
       "formal": "none",
       "product": "aevatar",
       "milestone": "A0",
       "owner": "loning",
-      "issue_count": 10,
+      "issue_count": 5,
       "focus": true,
       "archived": false,
       "promoted_at": {
