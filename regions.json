@@ -73,7 +73,7 @@
       "formal": "checked",
       "product": "aevatar",
       "milestone": "A0",
-      "owner": "eanzhao",
+      "owner": "JasonWangCN",
       "issue_count": 8,
       "focus": true,
       "archived": false,
@@ -82,7 +82,9 @@
         "bridged": "2026-05-11"
       },
       "deps": [
-        "Aevatar-Testnet-Stability"
+        "Aevatar-Agent-Framework",
+        "Aevatar-Testnet-Stability",
+        "Aevatar-Virtual-Actors"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar label:\"team\" OR (Studio in:title OR Team in:title)"
     },
@@ -101,7 +103,7 @@
       "milestone": "A0",
       "owner": "loning",
       "issue_count": 5,
-      "focus": false,
+      "focus": true,
       "archived": false,
       "promoted_at": {
         "obligation": "2026-04-10"
@@ -183,7 +185,9 @@
       "archived": false,
       "promoted_at": {},
       "deps": [
-        "Aevatar-ChatRuntime-Harness"
+        "Aevatar-Agent-Framework",
+        "Aevatar-ChatRuntime-Harness",
+        "Aevatar-Virtual-Actors"
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar responses in:title"
     },
@@ -1231,7 +1235,7 @@
       "archived": false,
       "promoted_at": {},
       "deps": [
-        "Aevatar-M14-Milestone",
+        "Aevatar-Responses-Ingress",
         "Aevatar-Channel-Multi-Adapter"
       ],
       "gh_query": "is:issue repo:aevatarAI/aevatar router in:title"
@@ -1258,6 +1262,31 @@
       },
       "deps": [],
       "gh_query": "is:issue repo:aevatarAI/aevatar (deprecate OR StreamingProxy OR Telegram) in:title"
+    },
+    "Aevatar-Inbound-Team-Demo": {
+      "label": {
+        "en": "Inbound → Router → Team Demo (Boss Endgame)",
+        "zh": "外部入站 → Router → Team 端到端 (老板要的)"
+      },
+      "desc": {
+        "en": "End-to-end demo convergence: NyxID Direct (/v1/responses) and Lark bot inbound channel both forward through the Router agent to a Studio/Team member, which handles the event via RoleGAgent + NyxID + Ornn. This is the visible 2026 Q2 deliverable that proves the chain works.",
+        "zh": "三条线收口的端到端演示: NyxID 直连 (/v1/responses) 与 Lark bot 入站, 都通过 Router agent 转给 Studio/Team 的 member, member 用 RoleGAgent + NyxID + Ornn 处理。2026 Q2 老板要看到的可演示成果, 证明整条链路通了。"
+      },
+      "closure": "seed",
+      "formal": "none",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "eanzhao",
+      "issue_count": 0,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Router-Agent",
+        "Aevatar-Studio-Team-First",
+        "Aevatar-EventSourcing-Hardening"
+      ],
+      "gh_query": null
     }
   }
 }
