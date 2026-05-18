@@ -4,36 +4,6 @@
     "principle": "GitHub source code, issues, PRs, and project boards are the single source of truth. Every region must map to GitHub state. Internal docs / GTM artifacts / conceptual aggregations are NOT regions."
   },
   "regions": {
-    "Aevatar-A0-Milestone": {
-      "label": {
-        "en": "Aevatar A0 — Testnet Stable",
-        "zh": "Aevatar A0 — 测试网稳定"
-      },
-      "desc": {
-        "en": "Aggregator: Console + Studio + Workflow stable before Show HN. Tracked on board aevatarAI #23.",
-        "zh": "聚合节点: Console + Studio + Workflow 在 Show HN 前稳定可用。看板 aevatarAI #23"
-      },
-      "closure": "scoped",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "eanzhao",
-      "issue_count": 2,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Testnet-Stability",
-        "Aevatar-Workflow-YAML",
-        "Aevatar-Virtual-Actors",
-        "Aevatar-Agent-Framework",
-        "Aevatar-NyxID-Integration",
-        "Aevatar-Channel-Multi-Adapter",
-        "Aevatar-Studio-Team-First",
-        "Aevatar-EventSourcing-Hardening"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar A0 in:title"
-    },
     "Aevatar-Channel-Multi-Adapter": {
       "label": {
         "en": "Channel Multi-Adapter (Lark / Telegram / …)",
@@ -113,34 +83,6 @@
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar author:louis4li"
     },
-    "Aevatar-M14-Milestone": {
-      "label": {
-        "en": "Aevatar M14 — Responses API v1 Prototype",
-        "zh": "Aevatar M14 — Responses API v1 原型"
-      },
-      "desc": {
-        "en": "Aggregator: GitHub milestone #14 'Responses API v1 Minimal Prototype' — current focus. End state: user configures NyxID base URL + API key in Codex/Cursor/Opencode; request flows client -> NyxID -> Aevatar /v1/responses -> NyxID LLM -> client. Product RFC discussion #609.",
-        "zh": "聚合节点: GitHub milestone #14 'Responses API v1 Minimal Prototype' — 当前焦点。终态: 用户在 Codex/Cursor/Opencode 里配置 NyxID base URL + API key, 请求链路 client → NyxID → Aevatar /v1/responses → NyxID LLM → client。产品 RFC 讨论 #609"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "M14",
-      "owner": "eanzhao",
-      "issue_count": 14,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-ChatRuntime-Harness",
-        "Aevatar-Responses-Ingress",
-        "Aevatar-Responses-Auth-Scope",
-        "Aevatar-Session-Continuation",
-        "Aevatar-Tool-Classification",
-        "Aevatar-NyxID-Integration"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar milestone:\"Responses API v1 Minimal Prototype\""
-    },
     "Aevatar-ChatRuntime-Harness": {
       "label": {
         "en": "ChatRuntime → Harness Refactor (M14 blocker)",
@@ -190,125 +132,6 @@
       ],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar responses in:title"
     },
-    "Aevatar-Responses-Auth-Scope": {
-      "label": {
-        "en": "NyxID Auth Bridge + Scope Port",
-        "zh": "NyxID 鉴权桥 + Scope 端口"
-      },
-      "desc": {
-        "en": "M14 pillar — security: bridge NyxID request auth into the existing NyxIdLLMProvider (#613), add scope resolution port translating NyxID identity to aevatar scope (#621). §8 of RFC #609.",
-        "zh": "M14 支柱 — 安全层: 把 NyxID 请求鉴权接入现有 NyxIdLLMProvider (#613), 新增 scope 解析端口把 NyxID 身份翻译为 aevatar scope (#621)。对应 RFC #609 §8"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "M14",
-      "owner": "eanzhao",
-      "issue_count": 2,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-NyxID-Integration",
-        "Aevatar-Responses-Ingress"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar scope in:title OR auth in:title"
-    },
-    "Aevatar-Session-Continuation": {
-      "label": {
-        "en": "Session Continuation (response.id state machine)",
-        "zh": "Session Continuation (response.id 状态机)"
-      },
-      "desc": {
-        "en": "M14 pillar — long-running state: run/session ownership actor for opaque response.id (#617), persist forwarded tool calls (#618), POST /v1/responses/{id}/cancel + TTL expiry (#619), resume re-auth + cross-origin resume guard (#620). §13 of RFC #609.",
-        "zh": "M14 支柱 — 长连接状态: opaque response.id 的 run/session ownership actor (#617), 持久化 forwarded tool call (#618), POST /v1/responses/{id}/cancel + TTL 过期 (#619), resume 重新鉴权 + 跨域 resume guard (#620)。对应 RFC #609 §13"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "M14",
-      "owner": "eanzhao",
-      "issue_count": 4,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Responses-Ingress",
-        "Aevatar-Virtual-Actors"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar session in:title OR response.id in:title"
-    },
-    "Aevatar-Tool-Classification": {
-      "label": {
-        "en": "Tool Classification (forward / substitute / additive)",
-        "zh": "工具分类层 (forward / substitute / additive)"
-      },
-      "desc": {
-        "en": "M14 pillar — agent capability: tool classification layer at /v1/responses boundary (#622), substitute TodoWrite + Task with agent-scoped / topology-aware versions (#623), substitute WebFetch + WebSearch with traced versions (#624). §5 of RFC #609.",
-        "zh": "M14 支柱 — agent 能力层: /v1/responses 边界的工具分类 (#622), 把 TodoWrite + Task 替换为 agent 范围 / 拓扑感知版本 (#623), 把 WebFetch + WebSearch 替换为带 trace 版本 (#624)。对应 RFC #609 §5"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "M14",
-      "owner": "eanzhao",
-      "issue_count": 3,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Responses-Ingress",
-        "Aevatar-Agent-Framework"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar Substitute in:title OR classification in:title"
-    },
-    "Aevatar-Ornn-Skill-Platform": {
-      "label": {
-        "en": "Day One → Ornn Skill Migration",
-        "zh": "Day One → Ornn skill 迁移"
-      },
-      "desc": {
-        "en": "Migrate hardcoded AgentBuilder templates (/daily, /social-media) from C# to Ornn skill YAML runtime (#367, #598). SkillRunner hardening (#439, #444-#450). PR #576 (Lark Ornn autoload) shipped 2026-05-07.",
-        "zh": "AgentBuilder 模板 (/daily, /social-media) 从硬编码 C# 迁移到 Ornn skill YAML 运行时 (#367, #598)。SkillRunner 加固 (#439, #444-#450)。PR #576 (Lark Ornn autoload) 2026-05-07 已合并"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A1",
-      "owner": "eanzhao",
-      "issue_count": 8,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Workflow-YAML",
-        "Aevatar-CSharp-Scripting"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar Ornn in:title OR daily in:title OR SkillRunner in:title"
-    },
-    "Aevatar-SessionStream-Abstraction": {
-      "label": {
-        "en": "SessionStream Abstraction (RFC)",
-        "zh": "SessionStream 抽象 (RFC)"
-      },
-      "desc": {
-        "en": "RFC #560: unify external long-lived streams (WebSocket / WebRTC / SSE / polling) as actor-first SessionStreamGAgent. Co-assigned jason-aelf / louis4li / eanzhao; team-discussion phase, ADR not yet written.",
-        "zh": "RFC #560: 把外部长连接流 (WebSocket / WebRTC / SSE / polling) 统一为 actor 一等 SessionStreamGAgent。jason-aelf / louis4li / eanzhao 三人共同 assignee, 团队讨论阶段, ADR 尚未撰写"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A1",
-      "owner": "eanzhao",
-      "issue_count": 1,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Agent-Framework"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar SessionStream in:title OR \"long connection\" in:title"
-    },
     "Aevatar-Agent-Framework": {
       "label": {
         "en": "Agent Framework Core",
@@ -332,80 +155,6 @@
       },
       "deps": [],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar-framework"
-    },
-    "Aevatar-CSharp-Scripting": {
-      "label": {
-        "en": "C# Scripting Runtime",
-        "zh": "C# 脚本运行时"
-      },
-      "desc": {
-        "en": "Dynamic C# script execution inside Virtual Actors. Powering /daily + /social-media AgentBuilder templates in production. PR #515 (script lifecycle build surface) shipped 2026-04-29.",
-        "zh": "Virtual Actor 内动态执行 C# 脚本, 生产环境驱动 /daily + /social-media AgentBuilder 模板。PR #515 (script lifecycle build surface) 2026-04-29 已合并"
-      },
-      "closure": "bridged",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "eanzhao",
-      "issue_count": 4,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {
-        "bridged": "2026-04-29"
-      },
-      "deps": [
-        "Aevatar-Virtual-Actors"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar script in:title"
-    },
-    "Aevatar-NyxID-Integration": {
-      "label": {
-        "en": "Aevatar × NyxID Integration",
-        "zh": "Aevatar × NyxID 集成"
-      },
-      "desc": {
-        "en": "LLM / Tool / Auth Provider via NyxID, agent tool calls routed through NyxID proxy. PRs #561 / #570 / #571 (OAuth binding rebuild + self-heal) shipped early May. Recent bugs #538 / #543 / #549 (NyxIdSpecCatalog / OAuth rolling-deploy race) prevent mature.",
-        "zh": "通过 NyxID 提供 LLM / Tool / Auth Provider, agent 工具调用经 NyxID proxy 路由。PR #561 / #570 / #571 (OAuth binding rebuild + 自愈) 5 月初已合。近期 bug #538 / #543 / #549 (NyxIdSpecCatalog / OAuth 滚动部署竞争) 不满足 mature"
-      },
-      "closure": "bridged",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "eanzhao",
-      "issue_count": 9,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {
-        "public": "2026-04-02",
-        "bridged": "2026-05-06"
-      },
-      "deps": [
-        "NyxID-Hosted-Instance"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar NyxID in:title"
-    },
-    "Aevatar-Sisyphus-Integration": {
-      "label": {
-        "en": "Sisyphus on Aevatar Workflow",
-        "zh": "Sisyphus 运行在 Aevatar Workflow 上"
-      },
-      "desc": {
-        "en": "Sisyphus automated reasoning platform built on Aevatar Workflow YAML engine. Currently parked.",
-        "zh": "Sisyphus 自动推理平台基于 Aevatar Workflow YAML 引擎构建, 当前 PARKED"
-      },
-      "closure": "seed",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A1",
-      "owner": "chronoai-shining",
-      "issue_count": 6,
-      "focus": false,
-      "archived": false,
-      "promoted_at": {},
-      "deps": [
-        "Aevatar-Workflow-YAML"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar sisyphus in:title"
     },
     "Aevatar-Testnet-Stability": {
       "label": {
@@ -451,31 +200,6 @@
       },
       "deps": [],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar actor in:title"
-    },
-    "Aevatar-Workflow-YAML": {
-      "label": {
-        "en": "Workflow Engine (YAML)",
-        "zh": "Workflow 引擎 (YAML)"
-      },
-      "desc": {
-        "en": "Declarative YAML workflow definition and dynamic execution engine for Aevatar agents",
-        "zh": "面向 Aevatar agent 的声明式 YAML 工作流定义与动态执行引擎"
-      },
-      "closure": "bridged",
-      "formal": "checked",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "eanzhao",
-      "issue_count": 13,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {
-        "bridged": "2026-04-01"
-      },
-      "deps": [
-        "Aevatar-Virtual-Actors"
-      ],
-      "gh_query": "is:issue is:open repo:aevatarAI/aevatar workflow in:title"
     },
     "NyxID-OAuth-flow": {
       "label": {
@@ -954,9 +678,7 @@
       "focus": false,
       "archived": false,
       "promoted_at": {},
-      "deps": [
-        "Aevatar-Sisyphus-Integration"
-      ],
+      "deps": [],
       "gh_query": "is:issue is:open repo:aevatarAI/aevatar sisyphus in:title"
     },
     "Sisyphus-Discovery-Registry": {
@@ -1239,29 +961,6 @@
       ],
       "gh_query": "is:issue repo:aevatarAI/aevatar router in:title"
     },
-    "Aevatar-GAgent-Inventory-Cleanup": {
-      "label": {
-        "en": "GAgent Inventory Cleanup",
-        "zh": "GAgent 清单瘦身"
-      },
-      "desc": {
-        "en": "Deprecate Telegram bridge GAgents (#644, route via NyxID relay instead) and audit/remove StreamingProxy if obsolete (#645). Pairs with Router Agent — keep only the in-use ingress/runtime set. (#643 dead Multi-Agent removal is tracked under Aevatar-Ornn-Skill-Platform.)",
-        "zh": "废弃 Telegram bridge GAgents (#644, 改走 NyxID relay), 审计 StreamingProxy 是否已废弃 (#645)。与 Router Agent 配套, 只留可用的 ingress/runtime 集合。(#643 死代码 Multi-Agent 清理跟在 Aevatar-Ornn-Skill-Platform 下)"
-      },
-      "closure": "obligation",
-      "formal": "none",
-      "product": "aevatar",
-      "milestone": "A0",
-      "owner": "eanzhao",
-      "issue_count": 2,
-      "focus": true,
-      "archived": false,
-      "promoted_at": {
-        "obligation": "2026-05-15"
-      },
-      "deps": [],
-      "gh_query": "is:issue repo:aevatarAI/aevatar (deprecate OR StreamingProxy OR Telegram) in:title"
-    },
     "Aevatar-Inbound-Team-Demo": {
       "label": {
         "en": "Inbound → Router → Team Demo",
@@ -1281,11 +980,36 @@
       "archived": false,
       "promoted_at": {},
       "deps": [
+        "Aevatar-Chain-Test-Coverage",
+        "Aevatar-EventSourcing-Hardening",
         "Aevatar-Router-Agent",
-        "Aevatar-Studio-Team-First",
-        "Aevatar-EventSourcing-Hardening"
+        "Aevatar-Studio-Team-First"
       ],
       "gh_query": null
+    },
+    "Aevatar-Chain-Test-Coverage": {
+      "label": {
+        "en": "Chain Test Coverage",
+        "zh": "主链测试覆盖"
+      },
+      "desc": {
+        "en": "Cross-layer regression coverage for the Inbound → Router → Team chain. #666 Studio member identity / binding / current run cross-layer consistency. #667 LlmSession / ResponsesAgentToolState durable correctness regression. #668 Responses / Messages new main-chain test gaps. Owner: YueZh127 (QA).",
+        "zh": "外部入站 → Router → Team 主链的跨层回归覆盖。#666 Studio member 身份 / binding / current run 跨层一致性。#667 LlmSession / ResponsesAgentToolState durable correctness 回归。#668 Responses / Messages 新主链缺口测试。Owner: YueZh127 (测试)。"
+      },
+      "closure": "seed",
+      "formal": "checked",
+      "product": "aevatar",
+      "milestone": "A0",
+      "owner": "YueZh127",
+      "issue_count": 3,
+      "focus": true,
+      "archived": false,
+      "promoted_at": {},
+      "deps": [
+        "Aevatar-Studio-Team-First",
+        "Aevatar-Responses-Ingress"
+      ],
+      "gh_query": "is:issue is:open repo:aevatarAI/aevatar author:YueZh127 label:test"
     }
   }
 }
